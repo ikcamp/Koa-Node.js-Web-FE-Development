@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #006097;
+}
+
+form {
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+    padding: 15px 0 20px 0;
+}
+
+.sign-up {
+    background: rgba(0, 0, 0, 0.28);
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 3px 18px 8px rgba(38, 24, 24, 0.25);
+}
+
+input {
+    padding: 13px;
+    width: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type="submit"] {
+    background: rgba(0, 188, 212, 0.54);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.result {
+    color: #fff;
+}
