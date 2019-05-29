@@ -7,7 +7,10 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 
 
 const Category = sequelize.define('category', {
-  id: Sequelize.UUID,
+  id: {
+    type: Sequelize.UUID,
+    primaryKey: true
+  },
   name: Sequelize.STRING
 })
 
@@ -34,7 +37,7 @@ const Custom = sequelize.define('custom', {
     }
   },
   title: {
-    title: Sequelize.STRING,
+    type: Sequelize.STRING,
     allowNull: false,
     set (val) {
       this.setDataValue('title', val.toUpperCase())
@@ -45,7 +48,7 @@ const Custom = sequelize.define('custom', {
 const Product = sequelize.define('product', {
   name: Sequelize.STRING
 },{
-  timestamps: false, // 禁止创建CreateAt和UpdateAt字段
+  timestamps: true, // 禁止创建CreateAt和UpdateAt字段
   updatedAt: 'updateTimestamp', // 会创建updateTimestamp字段，替代UpdateAt字段
   tableName: 'my_product' // 修改创建的数据表名称为my_product
 })
